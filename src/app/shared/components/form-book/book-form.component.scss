@@ -1,0 +1,15 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    button{
+        background-color: #e72887;
+        color: #fff;
+
+    }
+}

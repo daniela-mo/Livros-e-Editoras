@@ -1,0 +1,22 @@
+
+
+@for (publisher of publishers(); track publisher.id) {
+    @defer (on immediate) {
+        <div class="item-container">
+            <app-card 
+                    [publisher]="publisher" 
+                    (edit)="onEdit(publisher)" 
+                    (delete)="onDelete(publisher)">
+                </app-card>
+            </div>
+        }
+} 
+@empty {
+    @defer (on immediate) {
+        <app-no-items></app-no-items>
+    }
+}
+<div class="action-container">
+    <a mat-raised-button color="primary" [routerLink]="['/create-publisher']">Cadastrar Editora</a>
+    <a mat-raised-button color="secondary" [routerLink]="['/']">Voltar para Início</a> 
+</div>

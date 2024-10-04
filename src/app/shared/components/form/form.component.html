@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-content-container">
+    <mat-form-field>
+      <mat-label>Digite aqui a Editora</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="title"
+        placeholder="Editora"
+      />
+    </mat-form-field>
+
+    <mat-form-field  appearance="fill">
+      <mat-label>Ano de Fundação</mat-label>
+      <mat-select formControlName="year">
+        @for (year of years; track year){
+        <mat-option [value]="year">
+          {{ year }}
+        </mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button>Salvar</button>
+  </div>
+</form>

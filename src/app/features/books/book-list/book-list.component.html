@@ -1,0 +1,25 @@
+
+
+@for (book of books(); track book.id) {
+  @defer (on immediate) {
+    <div class="item-container">
+      <app-book-card 
+      [book]="book" 
+      (edit)="onEdit(book)" 
+      (delete)="onDelete(book)">
+  </app-book-card>
+    </div>
+  }
+} 
+@empty {
+  @defer (on immediate) {
+    <app-no-items-book></app-no-items-book>
+  }
+}
+
+
+<div class="action-container">
+  <a mat-raised-button [routerLink]="['/books/create']">Cadastrar Livro</a>
+  <a mat-raised-button  [routerLink]="['/']">Voltar para Início</a> 
+
+</div>

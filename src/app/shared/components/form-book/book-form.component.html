@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-content-container">
+    <mat-form-field>
+      <mat-label>Título do Livro</mat-label>
+      <input type="text" matInput formControlName="title" placeholder="Título do Livro" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Autor</mat-label>
+      <input type="text" matInput formControlName="author" placeholder="Autor" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Ano de Publicação</mat-label>
+      <mat-select formControlName="year">
+        @for (year of years; track year){
+        <mat-option [value]="year">
+          {{ year }}
+        </mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button >Salvar</button>
+  </div>
+</form>

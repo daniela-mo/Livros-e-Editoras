@@ -1,0 +1,14 @@
+
+
+
+<mat-card class="card">
+  <mat-card-header>
+      <mat-card-title>{{ publisherTitle() }}</mat-card-title>
+      <mat-card-subtitle>{{ foundationYear() }}</mat-card-subtitle>
+
+    </mat-card-header>
+  <mat-card-actions>
+      <button mat-button (click)="onEdit()">Editar</button>
+      <button mat-button (click)="onDelete()">Deletar</button>
+  </mat-card-actions>
+</mat-card>
