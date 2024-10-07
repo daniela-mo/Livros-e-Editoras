@@ -50,6 +50,11 @@ export class BookFormComponent {
   }
 
   onSubmit() {
+    if (this.form.invalid) {
+      alert('Todos os campos são obrigatórios!'); 
+      return;
+    }
+
     const book: Book = {
       id: this.generateId(), 
       ...this.form.value,
@@ -62,7 +67,7 @@ export class BookFormComponent {
 
     generateYears() {
       const currentYear = new Date().getFullYear();
-      for (let year = 1990; year <= currentYear; year++) {
+      for (let year = 1970; year <= currentYear; year++) {
         this.years.push(year);
       }
     }

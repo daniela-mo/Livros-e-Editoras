@@ -48,13 +48,18 @@ export class FormComponent {
   }
 
   onSubmit() {
+    if (this.form.invalid) {
+      alert('Todos os campos são obrigatórios!'); 
+      return;
+    }
+
     const publisher = this.form.value as Publisher;
     this.done.emit(publisher);
   }
 
   generateYears() {
     const currentYear = new Date().getFullYear();
-    for (let year = 1990; year <= currentYear; year++) {
+    for (let year = 1970; year <= currentYear; year++) {
       this.years.push(year);
     }
   }

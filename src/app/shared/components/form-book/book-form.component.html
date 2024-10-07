@@ -3,11 +3,17 @@
     <mat-form-field>
       <mat-label>Título do Livro</mat-label>
       <input type="text" matInput formControlName="title" placeholder="Título do Livro" />
+      <mat-error *ngIf="form.get('title')?.hasError('required') && form.get('title')?.touched">
+        O título do livro é obrigatório!
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field>
       <mat-label>Autor</mat-label>
       <input type="text" matInput formControlName="author" placeholder="Autor" />
+      <mat-error *ngIf="form.get('author')?.hasError('required') && form.get('author')?.touched">
+        O nome do autor é obrigatório!
+      </mat-error>
     </mat-form-field>
 
     <mat-form-field appearance="fill">
@@ -19,6 +25,9 @@
         </mat-option>
         }
       </mat-select>
+      <mat-error *ngIf="form.get('year')?.hasError('required') && form.get('year')?.touched">
+        O ano é obrigatório!
+      </mat-error>
     </mat-form-field>
 
     <button type="submit" mat-raised-button>Salvar</button>
