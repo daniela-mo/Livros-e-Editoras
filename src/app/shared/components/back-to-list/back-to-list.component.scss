@@ -1,10 +1,19 @@
 .link-container {
-    margin: 8px 0;
-    a{
-        color:#e72887;
+  margin: 8px 0;
+  .btn-back-list-publishers {
+    color: #fff;
+  }
+  .btn-back-list-publishers:hover {
+    background-color: #e72887;
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .link-container {
+    .btn-back-list-publishers {
+      background-color: #e72887;
+      color: #fff;
     }
-    a:hover{
-        background-color: #e72887;
-        color:#fff;
-    }
+  }
 }

@@ -1,6 +1,7 @@
 .card {
+  display: flex;
   width: 30rem;
-  margin: 1rem;
+  margin: 1rem 0.5rem;
   color: #1d4f91;
 
   button {
@@ -14,5 +15,12 @@
     margin-left: 1rem;
     border: none;
     cursor: pointer;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card {
+   max-width: 20rem;
   }
 }

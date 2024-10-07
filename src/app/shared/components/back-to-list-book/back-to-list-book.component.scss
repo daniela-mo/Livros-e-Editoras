@@ -1,10 +1,19 @@
 .link-container {
     margin: 8px 0;
-    a{
-        color:#e72887;
+    .btn-back-list-book {
+        color: #fff;    }
+    .btn-back-list-book:hover {
+      background-color: #e72887;
+      color: #fff;
     }
-    a:hover{
+  }
+  
+  @media (max-width: 768px) {
+    .link-container {
+      .btn-back-list-book {
         background-color: #e72887;
-        color:#fff;
+        color: #fff;
+      }
     }
-}
+  }
+  
